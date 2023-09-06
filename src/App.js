@@ -27,8 +27,6 @@ const App = (props) => {
       });
   }, []);
 
-  const addToFavorites = (movie) => {};
-
   return (
     <div>
       <nav className="bg-zinc-800 px-6 py-3">
@@ -49,7 +47,12 @@ const App = (props) => {
             </Route>
 
             <Route path="/movies/:id">
-              <Movie setMovies={setMovies} movies={movies} />
+              <Movie
+                setMovies={setMovies}
+                movies={movies}
+                favoriteMovies={favoriteMovies}
+                setFavoriteMovies={setFavoriteMovies}
+              />
             </Route>
 
             <Route path="/movies">

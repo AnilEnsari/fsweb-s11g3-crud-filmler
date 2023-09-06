@@ -22,7 +22,8 @@ const Movie = (props) => {
       });
   }, [id]);
 
-  const removeHandler = () => {
+  const removeHandler = (e) => {
+    e.preventDefault();
     axios.delete(`http://localhost:9000/api/movies/${id}`).then((res) => {
       setMovies(res.data);
       push("/movies");

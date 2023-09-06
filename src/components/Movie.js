@@ -44,11 +44,6 @@ const Movie = (props) => {
     localStorage.setItem("S11G3", JSON.stringify(updatedFavoriteMovies));
   };
 
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem("S11G3"));
-    setFavoriteMovies(storedFavorites);
-  }, []);
-
   return (
     <div className="bg-white rounded-md shadow flex-1">
       <div className="p-5 pb-3 border-b border-zinc-200">

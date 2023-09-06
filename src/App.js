@@ -14,7 +14,9 @@ import AddMovieForm from "./components/AddMovieForm";
 
 const App = (props) => {
   const [movies, setMovies] = useState([]);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [favoriteMovies, setFavoriteMovies] = useState(
+    JSON.parse(localStorage.getItem("S11G3")) || []
+  );
 
   useEffect(() => {
     axios

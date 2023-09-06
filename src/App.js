@@ -47,7 +47,7 @@ const App = (props) => {
             </Route>
 
             <Route path="/movies/:id">
-              <Movie />
+              <Movie setMovies={setMovies} movies={movies} />
             </Route>
 
             <Route path="/movies">
